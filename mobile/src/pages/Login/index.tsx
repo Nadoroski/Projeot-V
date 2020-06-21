@@ -19,7 +19,6 @@ const Login = () => {
     // onde será tratado e retornara os dados do usuario
     // e os dados de seu processo
     async function handleNavigationToDetalhe(){
-
         await api.get('processo',
             { params:{
                 nprocesso: processo, 
