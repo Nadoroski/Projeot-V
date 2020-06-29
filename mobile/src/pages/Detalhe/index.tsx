@@ -5,6 +5,7 @@ import Constants from "expo-constants";
 import {useNavigation, useRoute} from '@react-navigation/native'
 import api from '../../services/api';
 import { RectButton } from "react-native-gesture-handler";
+import { Tooltip } from "react-native-elements";
 //import { ScrollView } from 'react-native-gesture-handler';
 
 interface Params{
@@ -127,9 +128,18 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(2)}>
+                                <Tooltip 
+                                    popover={
+                                            <View>
+                                                <Text style={styles.textTooltip}>Desconto de parte do tempo da pena total pelo trabalho ou estudo realizado.</Text> 
+                                            </View>
+                                        }
+                                    containerStyle={styles.tooltip}
+                                    overlayColor='rgba(0,0,0,0.25)'
+                                    height= {110}
+                                >
                                     <Icon name="info" size={24} color="black" />
-                                </RectButton>
+                                </Tooltip>
                                 <Text style={styles.fontTitle}>Remições:</Text>
                             </View>
 
@@ -139,9 +149,18 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(3)}>
+                                <Tooltip 
+                                    popover={
+                                            <View>
+                                                <Text style={styles.textTooltip}>Período de pena já cumprido pelo reeducando, considerando as remições.</Text> 
+                                            </View>
+                                        }
+                                    containerStyle={styles.tooltip}
+                                    overlayColor='rgba(0,0,0,0.25)'
+                                    height= {110}
+                                >
                                     <Icon name="info" size={24} color="black" />
-                                </RectButton>
+                                </Tooltip>
                                 <Text style={styles.fontTitle}>Pena Cumprida:</Text>
                             </View>
 
@@ -151,9 +170,18 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(4)}>
+                            <Tooltip 
+                                    popover={
+                                            <View>
+                                                <Text style={styles.textTooltip}>Tempo de pena que falta cumprir para encerrar a Execução.</Text> 
+                                            </View>
+                                        }
+                                    containerStyle={styles.tooltip}
+                                    overlayColor='rgba(0,0,0,0.25)'
+                                    height= {110}
+                                >
                                     <Icon name="info" size={24} color="black" />
-                                </RectButton>
+                                </Tooltip>
                                 <Text style={styles.fontTitle}>Pena Remanescente:</Text>
                             </View>
 
@@ -163,9 +191,18 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(5)}>
+                                <Tooltip 
+                                    popover={
+                                            <View>
+                                                <Text style={styles.textTooltip}>Data inicial e previsão da data final do cumprimento da pena.</Text> 
+                                            </View>
+                                        }
+                                    containerStyle={styles.tooltip}
+                                    overlayColor='rgba(0,0,0,0.25)'
+                                    height= {110}
+                                >
                                     <Icon name="info" size={24} color="black" />
-                                </RectButton>
+                                </Tooltip>
                                 <Text style={styles.fontTitle}>Periodo de Apresentações:</Text>
                             </View>
 
@@ -175,9 +212,20 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(6)}>
+                                <Tooltip 
+                                    popover={
+                                            <View>
+                                                <Text style={styles.textTooltip}>1. Benefícios: Pena Restritiva de Direitos, Suspensão Condicional da Pena ou Livramento Condicional.</Text> 
+                                                <Text style={styles.textTooltip}>2. Todo Processo Criminal possui um regime inicial, o qual pode ser substituído por um benefício se cumprido os requisitos de cada benefício.</Text>
+                                                <Text style={styles.textTooltip}>3. Regime Aberto – Pena Restritiva de Direitos ou Sursis Regime Fechado/Semiaberto (normalmente no Semiaberto) – Livramento Condicional</Text>
+                                            </View>
+                                        }
+                                    containerStyle={styles.tooltip}
+                                    overlayColor='rgba(0,0,0,0.25)'
+                                    height= {350}
+                                >
                                     <Icon name="info" size={24} color="black" />
-                                </RectButton>
+                                </Tooltip>
                                 <Text style={styles.fontTitle}>Regime/Beneficio:</Text>
                             </View>
 
@@ -187,9 +235,18 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
                             
                             <View style={styles.campoIdentifica} >
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(7)}>
+                                <Tooltip 
+                                    popover={
+                                            <View>
+                                                <Text style={styles.textTooltip}>Condições a serem observadas para o cumprimento correto da pena.</Text> 
+                                            </View>
+                                        }
+                                    containerStyle={styles.tooltip}
+                                    overlayColor='rgba(0,0,0,0.25)'
+                                    height= {110}
+                                >
                                     <Icon name="info" size={24} color="black" />
-                                </RectButton>
+                                </Tooltip>
                                 <Text style={styles.fontTitle}>Condições de cumprimento:</Text>
                             </View>
 
@@ -199,9 +256,18 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(8)}>
+                                <Tooltip 
+                                    popover={
+                                            <View>
+                                                <Text style={styles.textTooltip}>Frequência para realização das apresentações em Cartório.</Text> 
+                                            </View>
+                                        }
+                                    containerStyle={styles.tooltip}
+                                    overlayColor='rgba(0,0,0,0.25)'
+                                    height= {110}
+                                >
                                     <Icon name="info" size={24} color="black" />
-                                </RectButton>
+                                </Tooltip>
                                 <Text style={styles.fontTitle}>Periocidade:</Text>
                             </View>
 
@@ -211,9 +277,18 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(9)}>
+                                <Tooltip 
+                                    popover={
+                                            <View>
+                                                <Text style={styles.textTooltip}>Documentos a serem apresentados imediatamente em Cartório.</Text> 
+                                            </View>
+                                        }
+                                    containerStyle={styles.tooltip}
+                                    overlayColor='rgba(0,0,0,0.25)'
+                                    height= {110}
+                                >
                                     <Icon name="info" size={24} color="black" />
-                                </RectButton>
+                                </Tooltip>
                                 <Text style={styles.fontTitle}>Documentos Pendentes:</Text>
                             </View>
 
@@ -278,6 +353,14 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'flex-start'
         },
+    
+    tooltip:{
+        backgroundColor: "#234252",
+        width: '60%'
+    },
+    textTooltip:{
+        fontSize: 18
+    }
     
 })
 

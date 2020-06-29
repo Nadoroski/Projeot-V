@@ -3,6 +3,7 @@ import { View,Text, StyleSheet,Image, TextInput} from "react-native";
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import api from '../../services/api';
+import { TextInputMask } from "react-native-masked-text";
 
 // Tela de login da aplicação, onde o usuario deve informar 
 // o numero do seu processo e a senha para pode acessa-lo
@@ -42,7 +43,19 @@ const Login = () => {
             </View>
 
             <View style={styles.fildLogin}>
-                <TextInput style={styles.input} placeholder="N° do processo" value={processo} onChangeText={setProcesso} ></TextInput>
+            <TextInputMask
+                    type={'custom'}
+                    options={{
+                        mask: '9999999-99.9999.99.99.9999'
+                    }}
+                    placeholder="N° do processo"
+                    value={processo}
+                    onChangeText={text => {
+                        setProcesso(text)
+                    }}
+                    style={styles.input}
+                    keyboardType= "numeric"
+                />
                 <TextInput style={styles.input} secureTextEntry={true} placeholder="Senha" value={senha} onChangeText={setSenha} ></TextInput>
                 <RectButton style={styles.button} onPress={handleNavigationToDetalhe}>
                     <Text style={styles.buttonText}>Entrar</Text>
