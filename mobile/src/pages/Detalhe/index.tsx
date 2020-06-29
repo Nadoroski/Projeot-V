@@ -53,7 +53,7 @@ const Detalhe = () => {
         api.get(`processo/${routeParams.id}`).then(response => {
             setDataPessoa(response.data[0]);
             setDataProcesso(response.data[1]);
-            console.log(response.data)
+            //console.log(response.data)
         }).catch(error => {console.log(error)});
         //console.log('estou dentro de detalhe ', routeParams.id)
       },[])
@@ -81,7 +81,7 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font} >Nome:</Text>
+                                <Text style={styles.fontTitle} >Nome:</Text>
                             </View>
 
                                 <Text style={styles.font}>{dataPessoa.nomeCompleto}</Text>
@@ -90,7 +90,7 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font} >Nome dos Pais:</Text>
+                                <Text style={styles.fontTitle} >Nome dos Pais:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataPessoa.nomeDaMae}, {dataPessoa.nomeDoPai}</Text>
@@ -99,7 +99,7 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font} >Data de Nascimento:</Text>
+                                <Text style={styles.fontTitle} >Data de Nascimento:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataPessoa.dataNascimento}</Text>
@@ -109,7 +109,7 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 
-                                <Text style={styles.font}>N° do Processo:</Text>
+                                <Text style={styles.fontTitle}>N° do Processo:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.numeroProcesso}</Text>
@@ -118,7 +118,7 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font} >Pena Total:</Text>
+                                <Text style={styles.fontTitle} >Pena Total:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.penaTotal}</Text>
@@ -128,9 +128,9 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(2)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                    <Icon name="info" size={24} color="black" />
                                 </RectButton>
-                                <Text style={styles.font}>Remições:</Text>
+                                <Text style={styles.fontTitle}>Remições:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.remicoes}</Text>
@@ -140,9 +140,9 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(3)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                    <Icon name="info" size={24} color="black" />
                                 </RectButton>
-                                <Text style={styles.font}>Pena Cumprida:</Text>
+                                <Text style={styles.fontTitle}>Pena Cumprida:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.penaCumprida}</Text>
@@ -152,9 +152,9 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(4)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                    <Icon name="info" size={24} color="black" />
                                 </RectButton>
-                                <Text style={styles.font}>Pena Remanescente:</Text>
+                                <Text style={styles.fontTitle}>Pena Remanescente:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.penaRemanescente}</Text>
@@ -164,9 +164,9 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(5)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                    <Icon name="info" size={24} color="black" />
                                 </RectButton>
-                                <Text style={styles.font}>Periodo de Apresentações:</Text>
+                                <Text style={styles.fontTitle}>Periodo de Apresentações:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.periodoApresentacoes}</Text>
@@ -176,9 +176,9 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(6)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                    <Icon name="info" size={24} color="black" />
                                 </RectButton>
-                                <Text style={styles.font}>Regime/Beneficio:</Text>
+                                <Text style={styles.fontTitle}>Regime/Beneficio:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.regimeBeneficio}</Text>
@@ -188,9 +188,9 @@ const Detalhe = () => {
                             
                             <View style={styles.campoIdentifica} >
                                 <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(7)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                    <Icon name="info" size={24} color="black" />
                                 </RectButton>
-                                <Text style={styles.font}>Condições de cumprimento:</Text>
+                                <Text style={styles.fontTitle}>Condições de cumprimento:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.condicoesCumprimento}</Text>
@@ -200,9 +200,9 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(8)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                    <Icon name="info" size={24} color="black" />
                                 </RectButton>
-                                <Text style={styles.font}>Ciclo:</Text>
+                                <Text style={styles.fontTitle}>Periocidade:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.ciclo}</Text>
@@ -212,9 +212,9 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(9)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                    <Icon name="info" size={24} color="black" />
                                 </RectButton>
-                                <Text style={styles.font}>Documentos Pendentes:</Text>
+                                <Text style={styles.fontTitle}>Documentos Pendentes:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.documentosPendentes}</Text>
@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
 
     detalheView:{
         flex: 1,
-        backgroundColor: '#FFF',
+        
         alignItems: 'center',
         //justifyContent:'space-between',
     },
@@ -252,7 +252,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#E2E2E2',
         borderRadius: 5,
         marginTop: 10,
-        marginBottom:4
+        paddingVertical: 2,
+        paddingLeft: 2
     },
 
     campoIdentifica:{
@@ -262,14 +263,20 @@ const styles = StyleSheet.create({
     },
 
     font:{
+        fontSize: 20, 
+        marginLeft: 10
+    },
+    fontTitle:{
         fontSize: 18, 
-        marginLeft: 4
+        marginLeft: 4,
+        fontWeight: "700",
+        
     },
         //style do botão para login
     button: {
-        width: '10%',
-        justifyContent: 'center',
-        alignItems: 'center'
+        width: '6%',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start'
         },
     
 })

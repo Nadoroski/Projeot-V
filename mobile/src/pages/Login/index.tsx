@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         //flex:0.3,
         marginTop: 35,
         width: '85%',
-        height: '25%',
+        height: 200,
         backgroundColor: '#E2E2E2',
         alignItems: 'center',
         justifyContent: 'center',
@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
       },
     //style do texto do botão
     buttonText: {
-    margin: 8,
-    color: '#000',
-    fontSize: 16
+        margin: 8,
+        color: '#000',
+        fontSize: 16
     },
 });
 
