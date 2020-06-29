@@ -108,10 +108,8 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
+                                
                                 <Text style={styles.font}>N° do Processo:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(1)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
-                                </RectButton>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.numeroProcesso}</Text>
@@ -121,9 +119,6 @@ const Detalhe = () => {
 
                             <View style={styles.campoIdentifica} >
                                 <Text style={styles.font} >Pena Total:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(2)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
-                                </RectButton>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.penaTotal}</Text>
@@ -132,10 +127,10 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font}>Remições:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(3)}>
+                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(2)}>
                                     <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
                                 </RectButton>
+                                <Text style={styles.font}>Remições:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.remicoes}</Text>
@@ -144,10 +139,10 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font}>Pena Cumprida:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(4)}>
+                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(3)}>
                                     <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
                                 </RectButton>
+                                <Text style={styles.font}>Pena Cumprida:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.penaCumprida}</Text>
@@ -156,10 +151,10 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font}>Pena Remanescente:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(5)}>
+                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(4)}>
                                     <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
                                 </RectButton>
+                                <Text style={styles.font}>Pena Remanescente:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.penaRemanescente}</Text>
@@ -168,46 +163,10 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font}>Regime/Beneficio:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(6)}>
+                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(5)}>
                                     <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
                                 </RectButton>
-                            </View>
-
-                            <Text style={styles.font}>{dataProcesso.regimeBeneficio}</Text>
-                        </View>
-
-                        <View style={styles.campoView} >
-                            
-                            <View style={styles.campoIdentifica} >
-                                <Text style={styles.font}>Condições de cumprimento:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(7)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
-                                </RectButton>
-                            </View>
-
-                            <Text style={styles.font}>{dataProcesso.condicoesCumprimento}</Text>
-                        </View>
-
-                        <View style={styles.campoView} >
-
-                            <View style={styles.campoIdentifica} >
-                                <Text style={styles.font}>Ciclo:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(8)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
-                                </RectButton>
-                            </View>
-
-                            <Text style={styles.font}>{dataProcesso.ciclo}</Text>
-                        </View>
-
-                        <View style={styles.campoView} >
-
-                            <View style={styles.campoIdentifica} >
                                 <Text style={styles.font}>Periodo de Apresentações:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(9)}>
-                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
-                                </RectButton>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.periodoApresentacoes}</Text>
@@ -216,10 +175,46 @@ const Detalhe = () => {
                         <View style={styles.campoView} >
 
                             <View style={styles.campoIdentifica} >
-                                <Text style={styles.font}>Documentos Pendentes:</Text>
-                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(10)}>
+                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(6)}>
                                     <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
                                 </RectButton>
+                                <Text style={styles.font}>Regime/Beneficio:</Text>
+                            </View>
+
+                            <Text style={styles.font}>{dataProcesso.regimeBeneficio}</Text>
+                        </View>
+
+                        <View style={styles.campoView} >
+                            
+                            <View style={styles.campoIdentifica} >
+                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(7)}>
+                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                </RectButton>
+                                <Text style={styles.font}>Condições de cumprimento:</Text>
+                            </View>
+
+                            <Text style={styles.font}>{dataProcesso.condicoesCumprimento}</Text>
+                        </View>
+
+                        <View style={styles.campoView} >
+
+                            <View style={styles.campoIdentifica} >
+                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(8)}>
+                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                </RectButton>
+                                <Text style={styles.font}>Ciclo:</Text>
+                            </View>
+
+                            <Text style={styles.font}>{dataProcesso.ciclo}</Text>
+                        </View>
+
+                        <View style={styles.campoView} >
+
+                            <View style={styles.campoIdentifica} >
+                                <RectButton style={styles.button} onPress={()=>handleNavigationToInfo(9)}>
+                                    <Icon name="info" size={24} color="black" style={{marginLeft: 4}} />
+                                </RectButton>
+                                <Text style={styles.font}>Documentos Pendentes:</Text>
                             </View>
 
                             <Text style={styles.font}>{dataProcesso.documentosPendentes}</Text>
